@@ -15,7 +15,6 @@ public class FirstLambdaExample implements RequestHandler<String, String> {
 
 		LambdaLogger logger = context.getLogger();
 		String response = "200 OK";
-		logger.log("Environment Variable: " + gson.toJson(System.getenv()));
 		logger.log("Context: " + gson.toJson(context));
 		logger.log("Hello world, Lambda. Input to the function is  " + input);
 		logger.log("Input: " + input.getClass());
@@ -23,3 +22,7 @@ public class FirstLambdaExample implements RequestHandler<String, String> {
 	}
 
 }
+
+//Hello world, Lambda. Input to the function is  HelloLambdaSecondInput
+//Input: class java.lang.String
+//Duration: 179.97 ms	Billed Duration: 180 ms	Memory Size: 512 MB	Max Memory Used: 91 MB	Init Duration: 421.45 ms
